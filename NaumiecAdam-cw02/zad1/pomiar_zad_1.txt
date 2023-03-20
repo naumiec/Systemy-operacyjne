@@ -1,0 +1,3 @@
+Zadanie 1 - pomiar
+Time (lib): 649000
+Time (sys): 233000

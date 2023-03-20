@@ -1,0 +1,13 @@
+1.
+Program działa na wzór polecenia tr, inaczej rozwiązana jest kwestia sprawdzania poprawności.
+Użycie funkcji systemowych jest szybsze niż użycie funkcji bibliotecznych.
+
+2.
+Programy działają analogicznie, wersja systemowa prawdopodobnie lepiej radzi sobie z różnymi kodowaniami znaków.
+Czytanie bloków po 1024 znaki jest szybsze niż czytanie po jednym znaku.
+
+3.
+Program i polecenie działają podobnie, oba działają w katalogu.
+
+4.
+Program czasami zwracał nieznacznie inne liczby, może to być spowodowane innym działaniem z mniej typowymi przypadkami plików, np. pliki ukryte, systemowe, tymczasowe.
