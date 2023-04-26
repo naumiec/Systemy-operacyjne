@@ -1,0 +1,12 @@
+Testing SA_SIGINFO...
+Testing SA_NODEFER...
+Testing SA_ONSTACK...
+Signal received: 30
+PID of sending process: 40607
+Child process did not terminate
+Signal received: 30
+PID of sending process: 40608
+Child process did not terminate
+Signal received: 30
+PID of sending process: 40609
+Child process did not terminate

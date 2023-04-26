@@ -1,0 +1,20 @@
+Dziedziczenie po wykonaniu funkcji fork:
+    - ignore: Potomek dziedziczy ustawienie ignorowania sygnału. Wysłanie sygnału przez proces przodka lub proces potomny nie powoduje żadnej reakcji.
+    - handler: Potomek dziedziczy ustawienie handlera sygnału, ale funkcja obsługująca sygnał musi być ponownie zainstalowana w procesie potomnym, jeśli chcemy mieć inną funkcję obsługi niż ta, którą zainstalował proces przodek. Wysłanie sygnału przez proces przodka lub proces potomny powoduje wykonanie zainstalowanej funkcji obsługi.
+    - mask: Potomek dziedziczy ustawienie maski sygnałów, czyli proces potomny będzie maskował te same sygnały co proces przodek. Wysłanie sygnału przez proces przodka lub proces potomny może zostać zablokowane przez maskę sygnałów. Aby proces potomny mógł odbierać dany sygnał, musi go odblokować.
+    - pending: Potomek dziedziczy sygnały, które były oczekujące w procesie przodka. Proces potomny może odczytać listę oczekujących sygnałów przy użyciu funkcji sigpending(). Wysłanie sygnału przez proces przodka powoduje, że sygnał zostanie dodany do listy oczekujących sygnałów w procesie przodka, ale nie będzie widoczny w procesie potomnym.
+
+Dziedziczenie ustawień sygnałów po wykonaniu funkcji exec:
+    - ignore: po wywołaniu funkcji exec ustawienie sygnału SIGUSR1 na ignorowanie zostaje zachowane, a sygnał nie jest obsługiwany.
+    - handler: po wywołaniu funkcji exec ustawienie sygnału SIGUSR1 na obsługę zostaje zachowane, a sygnał jest obsługiwany przez nową funkcję obsługi.
+    - mask: po wywołaniu funkcji exec maskowanie sygnału SIGUSR1 zostaje zachowane i sygnał jest nadal maskowany.
+    - pending: po wywołaniu funkcji exec czekające sygnały nie są dziedziczone przez proces potomny.
+
+Wnioski:
+    - Po wykonaniu funkcji fork ustawienia sygnałów są dziedziczone przez proces potomny, a po wykonaniu funkcji exec ustawienia sygnałów są zmieniane na te związane z nowym programem.
+    - Dziedziczenie sygnałów po wykonaniu funkcji fork dotyczy zarówno ustawień sygnałów, jak i sygnałów czekających.
+    - Dziedziczenie sygnałów po wykonaniu funkcji exec dotyczy tylko ustawień sygnałów.
+    - Sygnały ignorowane lub obsługiwane przez proces przodka nie są dziedziczone przez proces potomny po wykonaniu funkcji exec.
+    - Sygnały maskowane przez proces przodka są dziedziczone przez proces potomny po wykonaniu funkcji exec.
+    - Sygnały czekające nie są dziedziczone przez proces potomny po wykonaniu funkcji exec.
+    - W celu poprawnego dziedziczenia ustawień sygnałów po wykonaniu funkcji exec należy ponownie zainstalować funkcję obsługi sygnału lub zmienić ustawienia maskowania w procesie potomnym.

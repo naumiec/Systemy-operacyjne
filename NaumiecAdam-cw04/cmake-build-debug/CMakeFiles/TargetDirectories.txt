@@ -1,0 +1,3 @@
+/Users/adamnaumiec/Desktop/SysOpy/NaumiecAdam-cw04/cmake-build-debug/CMakeFiles/NaumiecAdam_cw04.dir
+/Users/adamnaumiec/Desktop/SysOpy/NaumiecAdam-cw04/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/adamnaumiec/Desktop/SysOpy/NaumiecAdam-cw04/cmake-build-debug/CMakeFiles/rebuild_cache.dir
