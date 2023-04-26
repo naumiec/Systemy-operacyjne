@@ -1,0 +1,18 @@
+Report for integral_processes:
+
+10 process, 0.000000001:
+The result is: 3.141593
+Time taken: 3.216055 seconds
+
+100 process, 0.000000001:
+The result is: 3.141593
+Time taken: 3.280962 seconds
+
+10 process, 0.000001:
+The result is: 3.141604
+Time taken: 0.008596 seconds
+
+100 process, 0.000001:
+The result is: 3.141685
+Time taken: 0.052736 seconds
+

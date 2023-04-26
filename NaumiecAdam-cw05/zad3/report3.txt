@@ -1,0 +1,18 @@
+Report for integral_programs:
+
+10 process, 0.000000001:
+The totalResult is: 3.141594
+Time taken: 1.095603 seconds
+
+100 process, 0.000000001:
+The totalResult is: 3.141589
+Time taken: 0.925191 seconds
+
+10 process, 0.000001:
+The totalResult is: 3.141605
+Time taken: 0.007546 seconds
+
+100 process, 0.000001:
+The totalResult is: 3.141687
+Time taken: 0.056047 seconds
+
